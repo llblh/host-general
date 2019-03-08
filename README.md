@@ -16,6 +16,7 @@
 
 ``` js
   this.$toast.loading('加载中...');
+  this.$toast.close(); // 关闭
   this.$toast.success('成功提示', 1000)
   this.$toast.error('错误提示');
   this.$notify('错误提示', 1000);
