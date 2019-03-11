@@ -2160,14 +2160,17 @@ function _objectSpread(target) {
 
   return target;
 }
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d1b3d832-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/lib/dialogs/Dialogs.vue?vue&type=template&id=3b218f98&
-var Dialogsvue_type_template_id_3b218f98_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"dialogs"}},[(_vm.show)?_c('div',{staticClass:"dialogs"},[_c('div',{staticClass:"dialogs-mask"}),_c('div',{staticClass:"dialogs-box"},[_c('div',{staticClass:"dialogs-hd"},[_c('p',{domProps:{"innerHTML":_vm._s(_vm.title)}}),(_vm.closeBtn)?_c('span',{staticClass:"dialogs-close",on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.onChangCancel()}}}):_vm._e()]),_c('div',{staticClass:"dialogs-bd",domProps:{"innerHTML":_vm._s(_vm.content)}}),_c('div',{staticClass:"dialogs-fd",class:_vm.footerClass},[(_vm.cancelText)?_c('button',{staticClass:"dialogs-btn dialog_btn_default",domProps:{"innerHTML":_vm._s(_vm.cancelText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.onChangCancel()}}}):_vm._e(),_c('button',{staticClass:"dialogs-btn",domProps:{"innerHTML":_vm._s(_vm.okText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.onChangOk()}}})])])]):_vm._e()])}
-var Dialogsvue_type_template_id_3b218f98_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d1b3d832-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/lib/dialogs/Dialogs.vue?vue&type=template&id=0ce4f4f8&
+var Dialogsvue_type_template_id_0ce4f4f8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"dialogs"}},[(_vm.show)?_c('div',{staticClass:"dialogs"},[_c('div',{staticClass:"dialogs-mask"}),_c('div',{staticClass:"dialogs-box"},[_c('div',{staticClass:"dialogs-hd"},[_c('p',{domProps:{"innerHTML":_vm._s(_vm.title)}}),(_vm.closeBtn)?_c('span',{staticClass:"dialogs-close",on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.onChangCancel()}}}):_vm._e()]),_c('div',{staticClass:"dialogs-bd",domProps:{"innerHTML":_vm._s(_vm.content)}}),(_vm.okText)?_c('div',{staticClass:"dialogs-fd",class:_vm.footerClass},[(_vm.cancelText)?_c('button',{staticClass:"dialogs-btn dialog_btn_default",domProps:{"innerHTML":_vm._s(_vm.cancelText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.onChangCancel()}}}):_vm._e(),_c('button',{staticClass:"dialogs-btn",domProps:{"innerHTML":_vm._s(_vm.okText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.onChangOk()}}})]):_vm._e()])]):_vm._e()])}
+var Dialogsvue_type_template_id_0ce4f4f8_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/lib/dialogs/Dialogs.vue?vue&type=template&id=3b218f98&
+// CONCATENATED MODULE: ./src/lib/dialogs/Dialogs.vue?vue&type=template&id=0ce4f4f8&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/lib/dialogs/Dialogs.vue?vue&type=script&lang=js&
+//
+//
+//
 //
 //
 //
@@ -2282,8 +2285,8 @@ var Dialogsvue_type_style_index_0_lang_less_ = __webpack_require__("1773");
 
 var Dialogs_component = normalizeComponent(
   dialogs_Dialogsvue_type_script_lang_js_,
-  Dialogsvue_type_template_id_3b218f98_render,
-  Dialogsvue_type_template_id_3b218f98_staticRenderFns,
+  Dialogsvue_type_template_id_0ce4f4f8_render,
+  Dialogsvue_type_template_id_0ce4f4f8_staticRenderFns,
   false,
   null,
   null,

@@ -8,14 +8,17 @@
           <span class="dialogs-close" v-if="closeBtn" @click.stop.prevent="onChangCancel()"></span>
         </div>
         <div class="dialogs-bd" v-html="content"></div>
-        <div class="dialogs-fd" :class="footerClass">
+        <div class="dialogs-fd" :class="footerClass" v-if="okText">
           <button class="dialogs-btn dialog_btn_default"
             @click.stop.prevent="onChangCancel()"
             v-if="cancelText"
             v-html="cancelText"
           >
           </button>
-          <button class="dialogs-btn" @click.stop.prevent="onChangOk()" v-html="okText"></button>
+          <button class="dialogs-btn"
+            @click.stop.prevent="onChangOk()"
+            v-html="okText"
+          ></button>
         </div>
       </div>
     </div>
