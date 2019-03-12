@@ -7,7 +7,10 @@
           <p v-html="title"></p>
           <span class="dialogs-close" v-if="closeBtn" @click.stop.prevent="onChangCancel()"></span>
         </div>
-        <div class="dialogs-bd" v-html="content"></div>
+        <div class="dialogs-bd" v-if="!isSlot" v-html="content"></div>
+        <div class="dialogs-bd" v-else>
+          <slot />
+        </div>
         <div class="dialogs-fd" :class="footerClass" v-if="okText">
           <button class="dialogs-btn dialog_btn_default"
             @click.stop.prevent="onChangCancel()"
@@ -30,6 +33,10 @@
 export default {
   name: 'dialogs',
   props: {
+    value: {
+      type: Boolean,
+      default: false,
+    },
     title: {
       type: String,
       default: '',
@@ -62,6 +69,10 @@ export default {
       type: String,
       default: '',
     },
+    isSlot: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -69,19 +80,36 @@ export default {
     };
   },
   beforeMount() {
-    const parent = document.querySelector('.dialogs');
-    // 是否存在父级
-    if (parent) {
-      parent.remove();
+    if (!this.isSlot) {
+      const parent = document.querySelector('.dialogs');
+      // 是否存在父级
+      if (parent) {
+        parent.remove();
+      }
+      document.body.appendChild(this.$el);
     }
-    document.body.appendChild(this.$el);
   },
   mounted() {
-    if (!this.show) {
+    if (!this.show && !this.isSlot) {
       this.show = true;
     } else {
       this.close();
     }
+  },
+  watch: {
+    value(val) {
+      this.show = val;
+    },
+    show(val) {
+      if (this.isSlot) {
+        this.$emit('input', val);
+      }
+      if (!val) {
+        document.body.classList.remove('ban');
+      } else {
+        document.body.classList.add('ban');
+      }
+    },
   },
   methods: {
     onChangOk() {
@@ -94,8 +122,10 @@ export default {
     },
     close() {
       this.show = false;
-      this.$destroy();
-      this.$el.remove();
+      if (!this.isSlot) {
+        this.$destroy();
+        this.$el.remove();
+      }
     },
   },
 };

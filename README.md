@@ -10,8 +10,11 @@
 ### 引用
 ``` js
   import hostGeneral from '@carpenter/host-general';
+  // import { Dialog, general } from '@carpenter/host-general';
   
   Vue.use(hostGeneral);
+  // Vue.use(general);
+  // Vue.component('DialogBox', Dialog);
 ```
 
 ``` js
@@ -33,4 +36,19 @@
       // console.log(this.onCancel);
     },
   });
+```
+``` vue
+  <DialogBox
+    v-model="show"
+    title="标题"
+    content="内容展示"
+    cancelText="取消" // 选填
+    okText="确定"
+    :closeBtn="true" // 选填
+    :onOk="onCliickOk" // 回调
+    :onCancel="onCliickCancel" // 回调
+    :isSlot="true" // 必填
+  >
+    <div>内容展示</div>
+  </DialogBox>
 ```
