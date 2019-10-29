@@ -3,7 +3,7 @@
     <div class="dialogs" v-if="show">
       <div class="dialogs-mask"></div>
       <div class="dialogs-box">
-        <div class="dialogs-hd" >
+        <div class="dialogs-hd" v-if="title" >
           <p v-html="title"></p>
           <span class="dialogs-close" v-if="closeBtn" @click.stop.prevent="onChangCancel()"></span>
         </div>

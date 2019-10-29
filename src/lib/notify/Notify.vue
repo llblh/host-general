@@ -1,9 +1,7 @@
 <template>
   <transition name="notifications">
     <div class="notifications" v-if="isShow">
-      <div class="notifications-info">
-        {{content}}
-      </div>
+      <div class="notifications-info" v-html="content"></div>
     </div>
   </transition>
 </template>

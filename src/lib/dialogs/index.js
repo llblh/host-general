@@ -16,4 +16,9 @@ const dialogs = (params) => {
   };
   return open(config);
 };
+
+// dialogs.prototype.close = () => {
+//   console.log(open);
+// };
+
 export default dialogs;

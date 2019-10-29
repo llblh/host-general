@@ -12,8 +12,7 @@
     "url": "https://github.com/llblh/host-general.git"
   },
   "main": "./dist/@carpenter/host-general.umd.min.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
@@ -37,7 +36,10 @@
       "@vue/airbnb"
     ],
     "rules": {
-      "max-len": [1, 200000]
+      "max-len": [
+        1,
+        200000
+      ]
     },
     "parserOptions": {
       "parser": "babel-eslint"

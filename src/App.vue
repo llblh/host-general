@@ -43,7 +43,7 @@ export default {
       }, 2000);
     },
     dialog() {
-      this.$dialogs({
+      const dialogs = this.$dialogs({
         title: '标题',
         content: '内容展示',
         cancelText: '取消',
@@ -56,6 +56,9 @@ export default {
           // console.log(this.onCancel);
         },
       });
+      setTimeout(() => {
+        dialogs.close();
+      }, 2000);
     },
     onCliickOk() {
       console.log('12');
