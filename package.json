@@ -1,6 +1,6 @@
 {
   "name": "@carpenter/host-general",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "移动端通用",
   "scripts": {
     "serve": "vue-cli-service serve",
