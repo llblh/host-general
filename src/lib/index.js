@@ -21,6 +21,9 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export {
   Dialog,
+  toast,
+  notify,
+  dialogs,
   general,
 };
 
