@@ -11,6 +11,7 @@
 ``` js
   import hostGeneral from '@carpenter/host-general';
   // import { Dialog, general } from '@carpenter/host-general';
+  // import { toast, notify, dialogs } from '@carpenter/host-general';
   
   Vue.use(hostGeneral);
   // Vue.use(general);
