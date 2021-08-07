@@ -1949,7 +1949,7 @@ exports = module.exports = __webpack_require__("2350")(false);
 
 
 // module
-exports.push([module.i, ".dialogs{position:relative;z-index:9000}.dialogs-mask{top:0;right:0;left:0;bottom:0;background-color:rgba(0,0,0,.5)}.dialogs-box,.dialogs-mask{position:fixed;z-index:9000}.dialogs-box{width:70.85%;top:40%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background-color:#fff;text-align:center;border-radius:.35em;overflow:hidden}.dialogs-close{display:block;position:relative;width:1.367em;height:1.367em;opacity:.4}.dialogs-close:after,.dialogs-close:before{content:\"\";position:absolute;top:45%;left:10%;display:block;width:80%;height:1px;background-color:#000}.dialogs-close:before{-webkit-transform:rotate(45deg);transform:rotate(45deg)}.dialogs-close:after{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.dialogs-hd{padding:1em 1em 0;font-size:115%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.dialogs-hd p{-webkit-box-flex:1;-ms-flex:1;flex:1;padding:0 1em;margin:0}.dialogs-bd{padding:1em;min-height:2em;font-size:100%;line-height:1.5;word-wrap:break-word;word-break:break-all;text-align:left}.dialogs-fd{position:relative;line-height:3;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border-top:1px solid #d5d5d6}.dialogs-btn{display:block;-webkit-box-flex:1;-ms-flex:1;flex:1;color:#0071c5;text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);position:relative;padding:1em;text-align:center;line-height:1;background-color:#fff;border:0;outline:0;font-size:110%;font-weight:400}.dialogs-btn.dialog_btn_default{color:#b3b3b3;border-right:1px solid #d5d5d6}.dialogs-btn:active{background-color:#f1f1f1}.dialogs-enter-active,.dialogs-leave-active{-webkit-transition:opacity .15s;transition:opacity .15s}.dialogs-enter,.dialogs-leave-to{opacity:0}", ""]);
+exports.push([module.i, ".dialogs{position:relative;z-index:9000}.dialogs-mask{top:0;right:0;left:0;bottom:0;background-color:rgba(0,0,0,.5)}.dialogs-box,.dialogs-mask{position:fixed;z-index:9000}.dialogs-box{width:70.85%;max-width:600px;top:40%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);background-color:#fff;text-align:center;border-radius:.35em;overflow:hidden}.dialogs-close{position:absolute;right:1em;top:1em;display:block;width:1.6em;height:1.6em;opacity:.4;cursor:pointer;outline:0;z-index:10}.dialogs-close:after,.dialogs-close:before{content:\"\";position:absolute;top:45%;left:10%;display:block;width:80%;height:1px;background-color:#000}.dialogs-close:before{-webkit-transform:rotate(45deg);transform:rotate(45deg)}.dialogs-close:after{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.dialogs-hd{position:relative}.dialogs-hd-title{padding:1em 1em .5em;font-size:115%;margin:0}.dialogs-bd{padding:1em;min-height:2em;font-size:100%;line-height:1.5;word-wrap:break-word;word-break:break-all;text-align:left}.dialogs-fd{position:relative;line-height:3;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border-top:1px solid #d5d5d6}.dialogs-btn{display:block;-webkit-box-flex:1;-ms-flex:1;flex:1;color:#0071c5;text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);position:relative;padding:1em;text-align:center;line-height:1;background-color:#fff;border:0;outline:0;font-size:110%;font-weight:400}.dialogs-btn.dialog_btn_default{color:#b3b3b3;border-right:1px solid #d5d5d6}.dialogs-btn:active{background-color:#f1f1f1}.dialogs-enter-active,.dialogs-leave-active{-webkit-transition:opacity .15s;transition:opacity .15s}.dialogs-enter,.dialogs-leave-to{opacity:0}", ""]);
 
 // exports
 
@@ -2379,14 +2379,19 @@ function _defineProperty(obj, key, value) {
 
   return obj;
 }
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"59eed298-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/lib/dialogs/Dialogs.vue?vue&type=template&id=6019162d&
-var Dialogsvue_type_template_id_6019162d_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"dialogs"}},[(_vm.show)?_c('div',{staticClass:"dialogs"},[_c('div',{staticClass:"dialogs-mask"}),_c('div',{staticClass:"dialogs-box"},[(_vm.title)?_c('div',{staticClass:"dialogs-hd"},[_c('p',{domProps:{"innerHTML":_vm._s(_vm.title)}}),(_vm.closeBtn)?_c('span',{staticClass:"dialogs-close",on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.onChangCancel()}}}):_vm._e()]):_vm._e(),(!_vm.isSlot)?_c('div',{staticClass:"dialogs-bd",domProps:{"innerHTML":_vm._s(_vm.content)}}):_c('div',{staticClass:"dialogs-bd"},[_vm._t("default")],2),(_vm.okText)?_c('div',{staticClass:"dialogs-fd",class:_vm.footerClass},[(_vm.cancelText)?_c('button',{staticClass:"dialogs-btn dialog_btn_default",domProps:{"innerHTML":_vm._s(_vm.cancelText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.onChangCancel()}}}):_vm._e(),_c('button',{staticClass:"dialogs-btn",domProps:{"innerHTML":_vm._s(_vm.okText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.onChangOk()}}})]):_vm._e()])]):_vm._e()])}
-var Dialogsvue_type_template_id_6019162d_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"59eed298-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/lib/dialogs/Dialogs.vue?vue&type=template&id=124c2546&
+var Dialogsvue_type_template_id_124c2546_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"dialogs"}},[(_vm.show)?_c('div',{staticClass:"dialogs"},[_c('div',{staticClass:"dialogs-mask"}),_c('div',{staticClass:"dialogs-box"},[(_vm.closeBtn)?_c('span',{staticClass:"dialogs-close",on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.onChangCancel()}}}):_vm._e(),(!_vm.title || !_vm.$slots.header)?_c('div',{staticClass:"dialogs-hd"},[_vm._t("header",function(){return [_c('p',{staticClass:"dialogs-hd-title",domProps:{"innerHTML":_vm._s(_vm.title)}})]})],2):_vm._e(),_c('div',{staticClass:"dialogs-bd"},[_vm._t("default",function(){return [_c('span',{domProps:{"innerHTML":_vm._s(_vm.content)}})]})],2),(!_vm.hideFooter)?_c('div',{staticClass:"dialogs-fd",class:_vm.footerClass},[_vm._t("footer",function(){return [(_vm.cancelText)?_c('button',{staticClass:"dialogs-btn dialog_btn_default",domProps:{"innerHTML":_vm._s(_vm.cancelText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.onChangCancel()}}}):_vm._e(),_c('button',{staticClass:"dialogs-btn",domProps:{"innerHTML":_vm._s(_vm.okText)},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.onChangOk()}}})]})],2):_vm._e()])]):_vm._e()])}
+var Dialogsvue_type_template_id_124c2546_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/lib/dialogs/Dialogs.vue?vue&type=template&id=6019162d&
+// CONCATENATED MODULE: ./src/lib/dialogs/Dialogs.vue?vue&type=template&id=124c2546&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/lib/dialogs/Dialogs.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2434,11 +2439,11 @@ var Dialogsvue_type_template_id_6019162d_staticRenderFns = []
     },
     okText: {
       type: String,
-      default: ''
+      default: '确定'
     },
     cancelText: {
       type: String,
-      default: ''
+      default: '取消'
     },
     onCancel: {
       type: Function,
@@ -2456,7 +2461,7 @@ var Dialogsvue_type_template_id_6019162d_staticRenderFns = []
       type: String,
       default: ''
     },
-    isSlot: {
+    hideFooter: {
       type: Boolean,
       default: false
     }
@@ -2468,7 +2473,7 @@ var Dialogsvue_type_template_id_6019162d_staticRenderFns = []
     };
   },
   beforeMount: function beforeMount() {
-    if (!this.isSlot) {
+    if (!this.$parent) {
       var parent = document.querySelector('.dialogs'); // 是否存在父级
 
       if (parent) {
@@ -2479,7 +2484,7 @@ var Dialogsvue_type_template_id_6019162d_staticRenderFns = []
     }
   },
   mounted: function mounted() {
-    if (!this.show && !this.isSlot) {
+    if (!this.show && !this.$parent) {
       this.show = true;
     } else {
       this.close();
@@ -2490,7 +2495,7 @@ var Dialogsvue_type_template_id_6019162d_staticRenderFns = []
       this.show = val;
     },
     show: function show(val) {
-      if (this.isSlot) {
+      if (this.$parent) {
         this.$emit('input', val);
       }
 
@@ -2513,7 +2518,7 @@ var Dialogsvue_type_template_id_6019162d_staticRenderFns = []
     close: function close() {
       this.show = false;
 
-      if (!this.isSlot) {
+      if (!this.$parent) {
         this.$destroy();
         this.$el.remove();
       }
@@ -2536,8 +2541,8 @@ var Dialogsvue_type_style_index_0_lang_less_ = __webpack_require__("1773");
 
 var Dialogs_component = normalizeComponent(
   dialogs_Dialogsvue_type_script_lang_js_,
-  Dialogsvue_type_template_id_6019162d_render,
-  Dialogsvue_type_template_id_6019162d_staticRenderFns,
+  Dialogsvue_type_template_id_124c2546_render,
+  Dialogsvue_type_template_id_124c2546_staticRenderFns,
   false,
   null,
   null,
