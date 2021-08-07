@@ -40,16 +40,25 @@
 ```
 ``` vue
   <DialogBox
-    v-model="show"
-    title="标题"
-    content="内容展示"
+    v-model="show" // 必填
+    title="标题" // 选填
+    content="内容展示" // 选填
     cancelText="取消" // 选填
-    okText="确定"
+    okText="确定" // 选填
     :closeBtn="true" // 选填
-    :onOk="onCliickOk" // 回调
-    :onCancel="onCliickCancel" // 回调
-    :isSlot="true" // 必填
+    :onOk="onCliickOk" // 选填 回调
+    :onCancel="onCliickCancel" // 选填 回调
   >
+    <!--
+      <template v-slot:header>
+        header
+      </template>
+    -->
     <div>内容展示</div>
+    <!--
+      <template v-slot:footer>
+        footer
+      </template>
+    -->
   </DialogBox>
 ```

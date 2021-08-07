@@ -3,25 +3,30 @@
     <div class="dialogs" v-if="show">
       <div class="dialogs-mask"></div>
       <div class="dialogs-box">
-        <div class="dialogs-hd" v-if="title" >
-          <p v-html="title"></p>
-          <span class="dialogs-close" v-if="closeBtn" @click.stop.prevent="onChangCancel()"></span>
+        <span class="dialogs-close" v-if="closeBtn" @click.stop.prevent="onChangCancel()"></span>
+        <div class="dialogs-hd" v-if="!title || !$slots.header" >
+          <slot name="header">
+            <p class="dialogs-hd-title" v-html="title"></p>
+          </slot>
         </div>
-        <div class="dialogs-bd" v-if="!isSlot" v-html="content"></div>
-        <div class="dialogs-bd" v-else>
-          <slot />
+        <div class="dialogs-bd">
+          <slot>
+            <span v-html="content" />
+          </slot>
         </div>
-        <div class="dialogs-fd" :class="footerClass" v-if="okText">
-          <button class="dialogs-btn dialog_btn_default"
-            @click.stop.prevent="onChangCancel()"
-            v-if="cancelText"
-            v-html="cancelText"
-          >
-          </button>
-          <button class="dialogs-btn"
-            @click.stop.prevent="onChangOk()"
-            v-html="okText"
-          ></button>
+        <div class="dialogs-fd" :class="footerClass" v-if="!hideFooter">
+          <slot name="footer">
+            <button class="dialogs-btn dialog_btn_default"
+              @click.stop.prevent="onChangCancel()"
+              v-if="cancelText"
+              v-html="cancelText"
+            >
+            </button>
+            <button class="dialogs-btn"
+              @click.stop.prevent="onChangOk()"
+              v-html="okText"
+            ></button>
+          </slot>
         </div>
       </div>
     </div>
@@ -47,11 +52,11 @@ export default {
     },
     okText: {
       type: String,
-      default: '',
+      default: '确定',
     },
     cancelText: {
       type: String,
-      default: '',
+      default: '取消',
     },
     onCancel: {
       type: Function,
@@ -69,7 +74,7 @@ export default {
       type: String,
       default: '',
     },
-    isSlot: {
+    hideFooter: {
       type: Boolean,
       default: false,
     },
@@ -80,7 +85,7 @@ export default {
     };
   },
   beforeMount() {
-    if (!this.isSlot) {
+    if (!this.$parent) {
       const parent = document.querySelector('.dialogs');
       // 是否存在父级
       if (parent) {
@@ -90,7 +95,7 @@ export default {
     }
   },
   mounted() {
-    if (!this.show && !this.isSlot) {
+    if (!this.show && !this.$parent) {
       this.show = true;
     } else {
       this.close();
@@ -101,7 +106,7 @@ export default {
       this.show = val;
     },
     show(val) {
-      if (this.isSlot) {
+      if (this.$parent) {
         this.$emit('input', val);
       }
       if (!val) {
@@ -122,7 +127,7 @@ export default {
     },
     close() {
       this.show = false;
-      if (!this.isSlot) {
+      if (!this.$parent) {
         this.$destroy();
         this.$el.remove();
       }
@@ -148,6 +153,7 @@ export default {
     position: fixed;
     z-index: 9000;
     width: 70.85%;
+    max-width: 600px;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -157,11 +163,16 @@ export default {
     overflow: hidden;
   }
   &-close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
     display: block;
-    position: relative;
-    width: 1.367em;
-    height: 1.367em;
+    width: 1.6em;
+    height: 1.6em;
     opacity: .4;
+    cursor: pointer;
+    outline: 0;
+    z-index: 10;
     &::before, &::after {
       content: '';
       position: absolute;
@@ -180,13 +191,10 @@ export default {
     }
   }
   &-hd {
-    padding: 1em 1em 0;
-    font-size: 115%;
-    display: flex;
-    align-items: center;
-    p {
-      flex: 1;
-      padding: 0 1em;
+    position: relative;
+    &-title {
+      padding: 1em 1em 0.5em;
+      font-size: 115%;
       margin: 0;
     }
   }
